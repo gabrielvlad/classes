@@ -28,5 +28,20 @@ string MakeOutWord(string outer, string word)
     Exceptions:
     ArgumentOutOfRangeException – startIndex plus length indicates a position not within this instance. -or- startIndex or length is less than zero.
     */
-    return $"{outer[..2]}{word}{outer[2..]}";
+    //works and remains as answer:
+    return $"{outer[..2]}{word}{outer[^2..]}"; //Example found: Console.WriteLine($"{numbers[^x]} is the same as {numbers[numbers.Length - x]}");
+    
+    /*Test:
+    Tested this but I dont know how to make the .. equivalent of it to work:
+    return $"{outer[..2]}{word}{outer[outer.Length -2]}";
+    */
+    
+    /*FIX
+     fixed the other part of the outer range from: return $"{outer[..2]}{word}{outer[2..]}"; to
+     return $"{outer[..2]}{word}{outer[^2..]}"
+     */
+
+    //return $"{outer[..2]}{word}{outer[3..]}";// I realized it starts from --> and shows what remains
+    //return $"{outer[..2]}{word}{outer[^4..]}";//I realized that using "^" it starts from --> but shows 
+    //everything instead of taking them away.
 }
