@@ -23,7 +23,7 @@ The folder structure is as follows:
   - NES1 - Networking and Security
   - SEP3 - Semester Project Three: Heterogeneous system
 - 4th semester Internet of Things
-  - ADS1 - Algorithms and Data Structures One
+  - ADS1 - Algorithms and Data Structures One(absent due to not coding but maybe ill add as notes)
   - ESW1 - Embedded Software One
   - WEB2 - Web Development 2
   - DOC1 - DevOps and Cloud
