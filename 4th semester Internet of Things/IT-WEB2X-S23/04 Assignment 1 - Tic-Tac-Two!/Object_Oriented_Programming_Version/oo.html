@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe - Object Oriented</title>
+    <style>
+      #board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      #board div {
+        font-size: 100px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid black;
+        border-collapse: collapse;
+        line-height: 80px;
+      }
+
+      #reset {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tic Tac Toe - Object Oriented</h1>
+    <div id="board"></div>
+    <button id="reset">Reset</button>
+
+    <script>
+      class Game {
+        constructor() {
+          this.player1 = "X";
+          this.player2 = "O";
+          this.currentPlayer = this.player1;
+          this.board = new Array(9).fill(null);
+          this.gameOver = false;
+          this.winner = null;
+          this.render();
+        }
+
+        render() {
+          const board = document.getElementById("board");
+          board.innerHTML = "";
+          this.board.forEach((cell, index) => {
+            const div = document.createElement("div");
+            div.addEventListener("click", () => this.handleCellClick(index));
+            div.textContent = cell;
+            board.appendChild(div);
+          });
+        }
+
+        handleCellClick(index) {
+          if (this.board[index] || this.gameOver) {
+            return;
+          }
+
+          this.board[index] = this.currentPlayer;
+          this.render();
+
+          if (this.checkWinner()) {
+            this.gameOver = true;
+            this.winner = this.currentPlayer;
+            // wait for the graphics to update before alerting
+            window.setTimeout(() => {
+              alert(`Player ${this.winner} wins!`);
+            }, 50);
+
+            return;
+          }
+
+          if (this.checkTie()) {
+            this.gameOver = true;
+            alert("Tie game!");
+            return;
+          }
+
+          this.currentPlayer =
+            this.currentPlayer === this.player1 ? this.player2 : this.player1;
+        }
+
+        checkWinner() {
+          const winningCombos = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6],
+          ];
+
+          for (let i = 0; i < winningCombos.length; i++) {
+            const [a, b, c] = winningCombos[i];
+            if (
+              this.board[a] &&
+              this.board[a] === this.board[b] &&
+              this.board[a] === this.board[c]
+            ) {
+              return true;
+            }
+          }
+
+          return false;
+        }
+
+        checkTie() {
+          return !this.board.includes(null);
+        }
+
+        reset() {
+          this.board = new Array(9).fill(null);
+          this.currentPlayer = this.player1;
+          this.gameOver = false;
+          this.winner = null;
+          this.render();
+        }
+      }
+
+      const game = new Game();
+
+      document
+        .getElementById("reset")
+        .addEventListener("click", () => game.reset());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe - Functional Programming</title>
+	<style>
+		#board {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			margin-top: 50px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		#board div {
+			font-size: 100px;
+			text-align: center;
+			cursor: pointer;
+			user-select: none;
+			border: 1px solid black;
+			border-collapse: collapse;
+			line-height: 80px;
+		}
+
+		#reset {
+			margin-top: 20px;
+			padding: 10px;
+			font-size: 20px;
+		}
+	</style>
+
+</head>
+<body>
+<h1>Tic Tac Toe - Functional Programming</h1>
+<div id="board"></div>
+<button id="reset">Reset</button>
+
+<script>
+	let player1 = 'X';
+	let player2 = 'O';
+	let currentPlayer = player1;
+	let board = new Array(9).fill(null);
+	let gameOver = false;
+	let winner = null;
+	render();
+
+	function render() {
+		const boardDOM = document.getElementById('board');
+		boardDOM.innerHTML = '';
+		board.forEach((cell, index) => {
+			const div = document.createElement('div');
+			div.addEventListener('click', () => handleCellClick(index));
+			div.textContent = cell;
+			boardDOM.appendChild(div);
+		});
+	}
+
+	function handleCellClick(index) {
+		if (board[index] || gameOver) {
+			return;
+		}
+
+		board[index] = currentPlayer;
+		render();
+
+		if (checkWinner()) {
+			gameOver = true;
+			winner = currentPlayer;
+
+			// wait for the graphics to update before alerting
+			window.setTimeout(()=>{
+				alert(`Player ${winner} wins!`);
+			}, 50)
+
+			return;
+		}
+
+		if (checkTie()) {
+			gameOver = true;
+			alert('Tie game!');
+			return;
+		}
+
+		currentPlayer = currentPlayer === player1 ? player2 : player1;
+	}
+
+	function checkWinner() {
+		const winningCombos = [
+			[0, 1, 2],
+			[3, 4, 5],
+			[6, 7, 8],
+			[0, 3, 6],
+			[1, 4, 7],
+			[2, 5, 8],
+			[0, 4, 8],
+			[2, 4, 6]
+		];
+
+		for (let i = 0; i < winningCombos.length; i++) {
+			const [a, b, c] = winningCombos[i];
+			if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	function checkTie() {
+		return !board.includes(null);
+	}
+
+	function reset() {
+		board = new Array(9).fill(null);
+		currentPlayer = player1;
+		gameOver = false;
+		winner = null;
+		render();
+	}
+
+	document.getElementById('reset').addEventListener('click', () => reset());
+</script>
+</body>
+</html>
