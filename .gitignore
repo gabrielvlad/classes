@@ -557,15 +557,30 @@ $RECYCLE.BIN/
 !.idea/codeStyles
 !.idea/runConfigurations
 
-#sub directories:
-IT-CAO1X-A22/**/.idea/*
-IT-DBS1Z-S22/**/.idea/*
-IT-DNP1X-A22/**/.idea/*
-IT-NES1X-A22/**/.idea/*
-IT-RWD1Z-A21/**/.idea/*
-IT-SDJ1Z-A21/**/.idea/*
-IT-SDJ2Z-S22/**/.idea/*
-IT-SDJ3X-A22/**/.idea/*
+#sub directories by semester
+#first semester
+1st semester Single User Systems/IT-SDJ1Z-A21/**/.idea/*
+1st semester Single User Systems/IT-RWD1Z-A21/**/.idea/*
+1st semester Single User Systems/IT-DMA1Z-A21/**/.idea/*
+1st semester Single User Systems/IT-SEP1Z-A21/**/.idea/*
+1st semester Single User Systems/IT-SEP1Y-A21/**/.idea/*
+#second semester
+2nd semester Client-Server Systems/IT-SDJ2Z-S22/**/.idea/*
+2nd semester Client-Server Systems/IT-SWE1Z-S22/**/.idea/*
+2nd semester Client-Server Systems/IT-DBS1Z-S22/**/.idea/*
+2nd semester Client-Server Systems/IT-SEP2Z-S22/**/.idea/*
+#third semester
+3rd semester Heterogeneous Systems/IT-SDJ3X-A22/**/.idea/*
+3rd semester Heterogeneous Systems/IT-CAO1X-A22/**/.idea/*
+3rd semester Heterogeneous Systems/IT-DNP1X-A22/**/.idea/*
+3rd semester Heterogeneous Systems/IT-NES1X-A22/**/.idea/*
+3rd semester Heterogeneous Systems/IT-SEP3X-A22/**/.idea/*
+#forth semester
+4th semester Internet of Things/IT-ADS1X-S23/**/.idea/*
+4th semester Internet of Things/IT-ESW1X-S23/**/.idea/*
+4th semester Internet of Things/IT-WEB2X-S23/**/.idea/*
+4th semester Internet of Things/IT-DOC1X-S23/**/.idea/*
+4th semester Internet of Things/IT-SEP4X-S23/**/.idea/*
 
 #exclude this 2 files:
 !/**/.idea/codeStyles
