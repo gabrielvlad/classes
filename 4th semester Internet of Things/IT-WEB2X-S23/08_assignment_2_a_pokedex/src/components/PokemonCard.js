@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/PokemonCard.css";
 
 function PokemonCard({ pokemon }) {
   const id = pokemon.url.split("/")[6];
@@ -7,7 +8,7 @@ function PokemonCard({ pokemon }) {
 
   return (
     <div className="pokemon-card">
-      <Link to={`/pokemon/${id}`}>
+      <Link to={`/details/${id}`}>
         <img src={imageUrl} alt={pokemon.name} />
         <h3>{pokemon.name}</h3>
       </Link>
