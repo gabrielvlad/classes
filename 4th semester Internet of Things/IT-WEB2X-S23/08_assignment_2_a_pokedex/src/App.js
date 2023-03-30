@@ -18,6 +18,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/footer" component={Footer} />
         </Routes>
+        <About />
         <Footer />
       </Router>
     </div>
