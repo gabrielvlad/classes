@@ -13,14 +13,22 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<PokemonList />} />
+          <Route path="/" element={<Home />} />
           <Route path="/details/:id" element={<PokemonDetails />} />
-          <Route path="/about" component={About} />
-          <Route path="/footer" component={Footer} />
         </Routes>
-        <About />
-        <Footer />
       </Router>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<PokemonList />} />
+      </Routes>
+      <About />
+      <Footer />
     </div>
   );
 }
