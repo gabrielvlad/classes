@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
           <Route path="/details/:id" element={<PokemonDetails />} />
         </Routes>
       </Router>
@@ -25,7 +25,7 @@ function Home() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<PokemonList />} />
+        <Route path="*" element={<PokemonList />} />
       </Routes>
       <About />
       <Footer />

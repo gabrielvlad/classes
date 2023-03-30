@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import { Link } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
 import Pagination from "./Pagination";
 import Loading from "./Loading";
@@ -37,7 +36,7 @@ function PokemonList() {
   if (loading) return <Loading />;
 
   return (
-    <div>
+    <div className="pokemon-list-container">
       <div className="pokemon-list">
         {pokemonData.map((pokemon, index) => (
           <PokemonCard key={index} pokemon={pokemon} />

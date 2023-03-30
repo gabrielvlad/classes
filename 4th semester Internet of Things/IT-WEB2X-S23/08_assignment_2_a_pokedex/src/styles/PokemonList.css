@@ -1,0 +1,15 @@
+/*Doesnt really do anything for now, but ill leave it as I am thinking of recentering content with containers*/
+.pokemon-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
