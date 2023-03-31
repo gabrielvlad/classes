@@ -1,5 +1,5 @@
 
-/*
+/* testing around...
 .pokemon-list { 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -26,6 +26,7 @@
 }
 */
 
+/*version 2*/
 .pokemon-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -38,7 +39,7 @@
 .pokemon-list a {
   display: grid;
   grid-template-rows: 1fr 0;
-  aspect-ratio: 5 / 7.1;
+  aspect-ratio: 5/7.1;
   margin: 10px;
   border-radius: 25px;
 }
@@ -46,23 +47,11 @@
 .pokemon-list img {
   justify-self: center;
   align-self: center;
-  width: 50%;
+  width: 75%;
 }
 
 .pokemon-list h3 {
   align-self: end;
   text-align: center;
   margin: 10px 0;
-}
-
-.pokemon-list div:nth-child(1) a {
-  
-}
-
-.pokemon-list div:nth-child(1) img {
-  
-}
-
-.pokemon-list div:nth-child(1) h3 {
-  
 }
