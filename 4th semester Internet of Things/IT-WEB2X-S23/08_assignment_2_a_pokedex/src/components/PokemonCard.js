@@ -18,16 +18,14 @@ function PokemonCard({ pokemon }) {
     fetchData();
   }, [pokemon.url]);
 
-  const typeColor = type.length ? getTypeColor(type[0].type.name) : "gray";
+  const typeColor = type.length
+    ? getTypeColor(type[0].type.name)
+    : console.log("Nothing found");
 
   return (
     <div
       className="pokemon-card"
       style={{
-        display: "inline-block",
-        marginRight: "20px",
-        marginBottom: "20px",
-        marginLeft: "20px",
         backgroundColor: typeColor,
       }}
     >

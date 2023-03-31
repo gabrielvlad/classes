@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import PokemonCard from "./PokemonCard";
 import Pagination from "./Pagination";
 import Loading from "./Loading";
+import "../styles/PokemonList.css";
 
 function PokemonList() {
   const [pokemonData, setPokemonData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPageUrl, setCurrentPageUrl] = useState(
-    "https://pokeapi.co/api/v2/pokemon/?limit=12&offset=0"
+    "https://pokeapi.co/api/v2/pokemon/?limit=15&offset=0"
   );
   const [nextPageUrl, setNextPageUrl] = useState("");
   const [prevPageUrl, setPrevPageUrl] = useState("");
@@ -42,10 +43,12 @@ function PokemonList() {
           <PokemonCard key={index} pokemon={pokemon} />
         ))}
       </div>
-      <Pagination
-        goToNextPage={nextPageUrl ? goToNextPage : null}
-        goToPrevPage={prevPageUrl ? goToPrevPage : null}
-      />
+      <div className="pagination-container">
+        <Pagination
+          goToNextPage={nextPageUrl ? goToNextPage : null}
+          goToPrevPage={prevPageUrl ? goToPrevPage : null}
+        />
+      </div>
     </div>
   );
 }

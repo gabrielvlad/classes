@@ -5,3 +5,20 @@ body {
 
 }
 */
+
+/*TODO make the text nicer*/
+
+/*TODO add theme switch*/
+
+a {
+    color: initial;
+    text-decoration: initial;
+}
+
+/*make the hover effect nicer*/
+a:hover {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: line-through black;
+    color:white;
+}

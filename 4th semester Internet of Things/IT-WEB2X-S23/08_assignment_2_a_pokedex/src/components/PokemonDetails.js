@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
+import "../styles/PokemonDetails.css";
 
 function PokemonDetails() {
   const [pokemon, setPokemon] = useState(null);

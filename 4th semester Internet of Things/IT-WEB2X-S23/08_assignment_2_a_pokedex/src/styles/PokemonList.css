@@ -1,15 +1,68 @@
-/*Doesnt really do anything for now, but ill leave it as I am thinking of recentering content with containers*/
-.pokemon-list-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
+
+/*
+.pokemon-list { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 5%;
+  margin: 10px auto;
+  width: 90%;
+}
+.pokemon-list > div {
+  background-color: darkcyan;
+  display: grid;
+  margin: 10px;
+}
+
+
+.pokemon-list > div a img{
+  justify-self: center;
+  align-self: end;
+}
+
+.pokemon-list > div a {
+  align-self: end;
+  text-align: center;
+  background-color: aqua;
+}
+*/
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 90%;
+  max-width: 1700px;
+  grid-gap: 15px 2%;
   margin: 0 auto;
 }
 
-.pokemon-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+.pokemon-list a {
+  display: grid;
+  grid-template-rows: 1fr 0;
+  aspect-ratio: 5 / 7.1;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.pokemon-list img {
+  justify-self: center;
+  align-self: center;
+  width: 50%;
+}
+
+.pokemon-list h3 {
+  align-self: end;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.pokemon-list div:nth-child(1) a {
+  
+}
+
+.pokemon-list div:nth-child(1) img {
+  
+}
+
+.pokemon-list div:nth-child(1) h3 {
+  
 }
