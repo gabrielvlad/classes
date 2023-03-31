@@ -25,30 +25,34 @@ function PokemonDetails() {
     <div className="pokemon-details">
       <img src={imageUrl} alt={pokemon.name} />
       <h2>{pokemon.name}</h2>
-      <div>
-        <div>
-          <span>
-            Types: {pokemon.types.map((type) => type.type.name).join(", ")}
+      <div className="details-container">
+        <div className="details-row">
+          <span className="details-label">Types:</span>
+          <span className="details-value">
+            {pokemon.types.map((type) => type.type.name).join(", ")}
           </span>
         </div>
-        <div>
-          <span>
-            Stats: {pokemon.stats.map((stat) => stat.stat.name).join(", ")}
+        <div className="details-row">
+          <span className="details-label">Stats:</span>
+          <span className="details-value">
+            {pokemon.stats.map((stat) => stat.stat.name).join(", ")}
           </span>
         </div>
-        <div>
-          <span>
-            Abilities:{" "}
+        <div className="details-row">
+          <span className="details-label">Abilities:</span>
+          <span className="details-value">
             {pokemon.abilities
               .map((ability) => ability.ability.name)
               .join(", ")}
           </span>
         </div>
-        <div>
-          <span>Height: {pokemon.height / 10} m </span>
+        <div className="details-row">
+          <span className="details-label">Height:</span>
+          <span className="details-value">{pokemon.height / 10} m</span>
         </div>
-        <div>
-          <span>Weight: {pokemon.weight / 10} kg </span>
+        <div className="details-row">
+          <span className="details-label">Weight:</span>
+          <span className="details-value">{pokemon.weight / 10} kg</span>
         </div>
       </div>
     </div>

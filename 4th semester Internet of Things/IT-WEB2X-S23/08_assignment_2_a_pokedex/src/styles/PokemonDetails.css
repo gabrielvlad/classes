@@ -1,3 +1,29 @@
 .pokemon-details {
-text-align: center;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  
+  .details-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .details-label {
+    font-weight: bold;
+  }
+  
+  .details-value {
+    margin-left: 10px;
+  }
+  
