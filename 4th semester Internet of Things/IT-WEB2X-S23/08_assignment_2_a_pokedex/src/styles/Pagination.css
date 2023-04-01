@@ -23,6 +23,8 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-family: 'Barcade Brawl', sans-serif;
+  font-size: 10px;
 }
 
 .pagination button:hover {

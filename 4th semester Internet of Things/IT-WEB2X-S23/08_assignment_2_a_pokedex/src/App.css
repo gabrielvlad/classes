@@ -24,3 +24,16 @@ a:hover {
 }
 */
 
+/* retro font from pokemon games :D */
+@font-face {
+    font-family: 'Barcade Brawl';
+    src: url('./assets/fonts/BarcadeBrawl.ttf') format('truetype');
+  }
+  
+
+/*Global rule to tell the app to use the font everywhere*/
+body {
+    font-family: 'Barcade Brawl', sans-serif;
+    font-size: 10px;
+  }
+  
