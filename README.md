@@ -35,3 +35,5 @@ The folder structure is as follows:
   - SEP6 - Semester Project (Innovation)
 - 7th semester
   - BPR2 - Bachelor Project
+
+Note: The .gitignore was custom made so it can accomodate this structure.

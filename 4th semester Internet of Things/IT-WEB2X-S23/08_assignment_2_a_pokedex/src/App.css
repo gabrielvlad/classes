@@ -1,0 +1,39 @@
+/*Under work
+body {
+
+    background-image: url("../src/assets/images/bg-dark.png");
+
+}
+*/
+
+/*TODO make the text nicer*/
+
+/*TODO add theme switch maybe*/
+
+/*version1
+a {
+    color: initial;
+    text-decoration: initial;
+}
+
+a:hover {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: line-through black;
+    color:white;
+}
+*/
+
+/* retro font from pokemon games :D */
+@font-face {
+    font-family: 'Barcade Brawl';
+    src: url('./assets/fonts/BarcadeBrawl.ttf') format('truetype');
+  }
+  
+
+/*Global rule to tell the app to use the font everywhere*/
+body {
+    font-family: 'Barcade Brawl', sans-serif;
+    font-size: 10px;
+  }
+  
