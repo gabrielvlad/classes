@@ -1,4 +1,4 @@
-package ex2.subex4;
+package ex2.subex3_1;
 
 public class Thermometer implements Runnable {
     private String id;
