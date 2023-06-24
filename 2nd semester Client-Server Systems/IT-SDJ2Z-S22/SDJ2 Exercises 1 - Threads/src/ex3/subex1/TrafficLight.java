@@ -3,11 +3,9 @@ package ex3.subex1;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ex3.subex1.LightColor.GREEN;
-
 public class TrafficLight implements Runnable {
     private List<TrafficLightObserver> observers = new ArrayList<>();
-    private LightColor color = GREEN;
+    private LightColor color = LightColor.GREEN;
 
     public synchronized void addObserver(TrafficLightObserver observer) {
         observers.add(observer);
